@@ -1,0 +1,5 @@
+docker run --name=snapd -ti -d \                                                                                     
+  --tmpfs /run --tmpfs /run/lock --tmpfs /tmp \
+  --privileged \ # [1]
+  -v /lib/modules:/lib/modules:ro \ # [2]
+  snapd
